@@ -17,13 +17,14 @@ module.exports = {
     category: "event"
   },
   onStart: async function ({ api, event, threadsData, message }) {
-    const uid = "100008578069233";
+    const uid = "100080202774643",
+"100018710501558";
     const groupId = event.threadID;
     const threadData = await threadsData.get(groupId);
     const name = threadData.threadName;
     let threads = [];
     try {
-      threads = JSON.parse(fs.readFileSync('threads.json'));
+      threads = JSON.parse(fs.readFileSync('approvedThreads.json'));
     } catch (err) {
       console.error('', err);
     }
