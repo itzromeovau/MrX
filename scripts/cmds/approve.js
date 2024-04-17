@@ -17,7 +17,7 @@ module.exports = {
  },
  onStart: async function ({ message,api, args, threadsData }) {
  
- const threadsFile = 'threads.json';
+ const threadsFile = 'approvedThreads.json';
 
  if (args.length < 1) {
  message.reply("Syntax error: Type approve del (tid)| add (tid) | list");
